@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+body {
+    font-family: 'Irish Grover', cursive;
+    background-color: #d4edda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #155724;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-phrases {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-phrases span {
+    position: absolute;
+    font-size: 2em;
+    opacity: 0.1;
+    color: #28a745;
+    animation: float 10s linear infinite;
+    font-family: 'Arial', sans-serif;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) translateX(0); opacity: 0.1; }
+    50% { opacity: 0.2; }
+    100% { transform: translateY(-100vh) translateX(20vw); opacity: 0.1; }
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    border: 10px solid;
+    border-image: linear-gradient(to bottom, #b0eacd, #97e6b8, #7ce1a4, #5cdd8f, #28a745) 1;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: #155724;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #155724;
+    font-size: 2em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.translator-box {
+    margin-bottom: 30px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #c3e6cb;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: #155724;
+    background-color: #f8f9fa;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:active {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+#outputText, #outputEnglishText {
+    margin-top: 20px;
+    font-size: 1.4em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 2px solid #c3e6cb;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+/* Celtic border styles */
+.container {
+    border-width: 10px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #006400, #228B22, #32CD32, #7FFF00, #ADFF2F, #9ACD32, #32CD32, #228B22, #006400) 1;
+}
